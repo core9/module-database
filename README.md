@@ -1,4 +1,4 @@
 module-database
 ===============
 
-Core9 Database Interface
+This module contains the interfaces for database modules. Currently, these are not yet plugins, due to limitations of the DI system.
