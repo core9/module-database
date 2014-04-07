@@ -20,4 +20,6 @@ task publishBintray (type: org._10ne.gradle.rest.RestTask, dependsOn: bintrayUpl
 }
 
 dependencies {
+	apiCompile 'io.core9:module-server-api:+'
+	apiCompile 'javax.persistence:persistence-api:+'
 }
