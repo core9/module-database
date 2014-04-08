@@ -1,5 +1,6 @@
 package io.core9.plugin.database.repository;
 
+import java.nio.ByteBuffer;
 import java.util.UUID;
 
 import javax.persistence.Id;
@@ -17,7 +18,9 @@ public abstract class AbstractCrudEntity implements CrudEntity {
 	@Override
 	public String getId() {
 		if(_id == null) {
-			_id = UUID.randomUUID().toString(); 
+			UUID uuid = UUID.randomUUID();
+			long l = ByteBuffer.wrap(uuid.toString().getBytes()).getLong();
+			_id = Long.toString(l, Character.MAX_RADIX).toUpperCase();
 		}
 		return _id;
 	}
