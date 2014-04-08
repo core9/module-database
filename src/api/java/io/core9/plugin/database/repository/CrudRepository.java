@@ -5,6 +5,8 @@ import io.core9.plugin.server.VirtualHost;
 import java.util.List;
 import java.util.Map;
 
+import com.sun.istack.internal.Nullable;
+
 public interface CrudRepository<T extends CrudEntity> {
 	
 	/**
@@ -27,9 +29,14 @@ public interface CrudRepository<T extends CrudEntity> {
 	T update(VirtualHost vhost, String id, T entity);
 	
 	/**
+	 * Get all entities from the collection
+	 */
+	List<T> getAll(VirtualHost vhost);
+	
+	/**
 	 * Query the collection for specific entities
 	 */
-	List<T> query(VirtualHost vhost, Map<String,Object> query);
+	List<T> query(VirtualHost vhost, @Nullable Map<String,Object> query);
 	
 	/**
 	 * Delete the entity
