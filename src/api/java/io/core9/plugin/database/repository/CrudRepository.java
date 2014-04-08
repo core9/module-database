@@ -41,5 +41,11 @@ public interface CrudRepository<T extends CrudEntity> {
 	 * @param item
 	 */
 	void delete(VirtualHost vhost, T entity);
+	
+	/**
+	 * Delete the entity by id
+	 * @param item
+	 */
+	void delete(VirtualHost vhost, String id);
 
 }

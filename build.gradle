@@ -21,5 +21,6 @@ task publishBintray (type: org._10ne.gradle.rest.RestTask, dependsOn: bintrayUpl
 
 dependencies {
 	apiCompile 'io.core9:module-server-api:+'
+	apiCompile 'com.fasterxml.jackson.core:jackson-databind:+'
 	apiCompile 'javax.persistence:persistence-api:+'
 }
