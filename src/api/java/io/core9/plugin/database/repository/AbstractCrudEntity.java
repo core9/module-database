@@ -1,6 +1,7 @@
 package io.core9.plugin.database.repository;
 
 import java.nio.ByteBuffer;
+import java.util.Map;
 import java.util.UUID;
 
 import javax.persistence.Id;
@@ -29,6 +30,11 @@ public abstract class AbstractCrudEntity implements CrudEntity {
 	@Override
 	public void setId(String id) {
 		this._id = id;
+	}
+	
+	@Override
+	public Map<String,Object> retrieveDefaultQuery() {
+		return null;
 	}
 
 }

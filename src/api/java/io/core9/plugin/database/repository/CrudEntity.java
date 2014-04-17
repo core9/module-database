@@ -1,5 +1,7 @@
 package io.core9.plugin.database.repository;
 
+import java.util.Map;
+
 /**
  * A default database entry, extend {@link AbstractCrudEntity} for a default implementation.
  * 
@@ -20,5 +22,9 @@ public interface CrudEntity {
 	 */
 	void setId(String id);
 	
-	
+	/**
+	 * Returns the default query, or null if none
+	 * @return
+	 */
+	Map<String,Object> retrieveDefaultQuery();
 }
