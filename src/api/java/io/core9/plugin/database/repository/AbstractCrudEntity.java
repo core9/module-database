@@ -13,7 +13,8 @@ import javax.persistence.Id;
  */
 public abstract class AbstractCrudEntity implements CrudEntity {
 	
-	private String _id;
+	@Id
+	public String _id;
 
 	@Id
 	@Override

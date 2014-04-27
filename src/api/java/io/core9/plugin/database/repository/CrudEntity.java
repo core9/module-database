@@ -2,6 +2,8 @@ package io.core9.plugin.database.repository;
 
 import java.util.Map;
 
+import javax.persistence.Id;
+
 /**
  * A default database entry, extend {@link AbstractCrudEntity} for a default implementation.
  * 
@@ -14,12 +16,14 @@ public interface CrudEntity {
 	 * Returns the ID, use {@link AbstractCrudEntity} for a default ID implementation
 	 * @return
 	 */
+	@Id
 	String getId();
 
 	/**
 	 * Set the ID of the entity, use {@link AbstractCrudEntity} for a default ID implementation
 	 * @param id
 	 */
+	@Id
 	void setId(String id);
 	
 	/**
