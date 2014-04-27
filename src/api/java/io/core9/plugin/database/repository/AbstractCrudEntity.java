@@ -4,8 +4,6 @@ import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.UUID;
 
-import javax.persistence.Id;
-
 /**
  * Provides a default implementation for {@link CrudEntity}
  * 
@@ -13,10 +11,16 @@ import javax.persistence.Id;
  */
 public abstract class AbstractCrudEntity implements CrudEntity {
 	
-	@Id
-	public String _id;
+	private String _id;
+	
+	/**
+	 * FIXME: Fix for @Id, which isn't working somehow
+	 * @param id
+	 */
+	public void set_id(String id) {
+		this._id = id;
+	}
 
-	@Id
 	@Override
 	public String getId() {
 		if(_id == null) {
@@ -27,7 +31,6 @@ public abstract class AbstractCrudEntity implements CrudEntity {
 		return _id;
 	}
 	
-	@Id
 	@Override
 	public void setId(String id) {
 		this._id = id;
