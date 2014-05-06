@@ -20,6 +20,10 @@ public abstract class AbstractCrudEntity implements CrudEntity {
 	public void set_id(String id) {
 		this._id = id;
 	}
+	
+	public String get_id() {
+		return this.getId();
+	}
 
 	@Override
 	public String getId() {
