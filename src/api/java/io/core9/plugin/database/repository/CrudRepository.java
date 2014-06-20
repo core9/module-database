@@ -9,43 +9,117 @@ public interface CrudRepository<T extends CrudEntity> {
 	
 	/**
 	 * Create a new entity
-	 * @param item
+	 * @param vhost
+	 * @param entity
+	 * @return
 	 */
 	T create(VirtualHost vhost, T entity);
 	
 	/**
+	 * Create a new entity
+	 * @param database
+	 * @param prefix
+	 * @param entity
+	 * @return
+	 */
+	T create(String database, String prefix, T entity);
+	
+	/**
 	 * Return a new entity from the id
+	 * @param vhost
 	 * @param id
 	 * @return
 	 */
 	T read(VirtualHost vhost, String id);
 	
 	/**
+	 * Return a new entity from the id
+	 * @param database
+	 * @param prefix
+	 * @param id
+	 * @return
+	 */
+	T read(String database, String prefix, String id);
+	
+	/**
 	 * Update the entity
-	 * @param item
+	 * @param vhost
+	 * @param id
+	 * @param entity
+	 * @return
 	 */
 	T update(VirtualHost vhost, String id, T entity);
 	
 	/**
+	 * Update the entity
+	 * @param database
+	 * @param prefix
+	 * @param id
+	 * @param entity
+	 * @return
+	 */
+	T update(String database, String prefix, String id, T entity);
+	
+	/**
 	 * Get all entities from the collection
+	 * @param vhost
+	 * @return
 	 */
 	List<T> getAll(VirtualHost vhost);
 	
 	/**
+	 * Get all entities from the collection
+	 * @param database
+	 * @param prefix
+	 * @return
+	 */
+	List<T> getAll(String database, String prefix);
+	
+	/**
 	 * Query the collection for specific entities
+	 * @param vhost
+	 * @param query
+	 * @return
 	 */
 	List<T> query(VirtualHost vhost, Map<String,Object> query);
 	
 	/**
+	 * Query the collection for specific entities
+	 * @param database
+	 * @param prefix
+	 * @param query
+	 * @return
+	 */
+	List<T> query(String database, String prefix, Map<String,Object> query);
+	
+	/**
 	 * Delete the entity
-	 * @param item
+	 * @param vhost
+	 * @param entity
 	 */
 	void delete(VirtualHost vhost, T entity);
 	
 	/**
+	 * Delete the entity
+	 * @param database
+	 * @param prefix
+	 * @param entity
+	 */
+	void delete(String database, String prefix, T entity);
+	
+	/**
 	 * Delete the entity by id
-	 * @param item
+	 * @param vhost
+	 * @param id
 	 */
 	void delete(VirtualHost vhost, String id);
+	
+	/**
+	 * Delete the entity
+	 * @param database
+	 * @param prefix
+	 * @param id
+	 */
+	void delete(String database, String prefix, String id);
 
 }
