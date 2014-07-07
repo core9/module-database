@@ -61,6 +61,23 @@ public interface CrudRepository<T extends CrudEntity> {
 	T update(String database, String prefix, String id, T entity);
 	
 	/**
+	 * Upsert the entity
+	 * @param vhost
+	 * @param entity
+	 * @return
+	 */
+	T upsert(VirtualHost vhost, T entity);
+	
+	/**
+	 * Upsert the entity
+	 * @param database
+	 * @param prefix
+	 * @param entity
+	 * @return
+	 */
+	T upsert(String database, String prefix, T entity);
+	
+	/**
 	 * Get all entities from the collection
 	 * @param vhost
 	 * @return
