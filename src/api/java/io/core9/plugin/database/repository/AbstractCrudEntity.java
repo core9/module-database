@@ -1,5 +1,6 @@
 package io.core9.plugin.database.repository;
 
+import java.io.Serializable;
 import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.UUID;
@@ -9,7 +10,9 @@ import java.util.UUID;
  * 
  * @author mark.wienk@core9.io
  */
-public abstract class AbstractCrudEntity implements CrudEntity {
+public abstract class AbstractCrudEntity implements CrudEntity, Serializable {
+	
+	private static final long serialVersionUID = 2944627606336260787L;
 	
 	private String _id;
 	
