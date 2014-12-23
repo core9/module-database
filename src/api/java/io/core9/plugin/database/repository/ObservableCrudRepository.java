@@ -48,7 +48,7 @@ public interface ObservableCrudRepository<T extends CrudEntity> {
 	 * @param entity
 	 * @return
 	 */
-	Observable<T> update(VirtualHost vhost, T entity);
+	T update(VirtualHost vhost, T entity);
 	
 	/**
 	 * Update the entity
@@ -57,7 +57,7 @@ public interface ObservableCrudRepository<T extends CrudEntity> {
 	 * @param entity
 	 * @return
 	 */
-	Observable<T> update(String database, String prefix, T entity);
+	T update(String database, String prefix, T entity);
 	
 	/**
 	 * Update the entity
@@ -66,7 +66,7 @@ public interface ObservableCrudRepository<T extends CrudEntity> {
 	 * @param entity
 	 * @return
 	 */
-	Observable<T> updateFields(VirtualHost vhost, T entity);
+	T updateFields(VirtualHost vhost, T entity);
 	
 	/**
 	 * Update the entity
@@ -75,7 +75,7 @@ public interface ObservableCrudRepository<T extends CrudEntity> {
 	 * @param entity
 	 * @return
 	 */
-	Observable<T> updateFields(String database, String prefix, T entity);
+	T updateFields(String database, String prefix, T entity);
 	
 	/**
 	 * Upsert the entity
