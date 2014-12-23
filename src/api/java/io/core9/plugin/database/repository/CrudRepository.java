@@ -48,7 +48,25 @@ public interface CrudRepository<T extends CrudEntity> {
 	 * @param entity
 	 * @return
 	 */
+	@Deprecated
 	T update(VirtualHost vhost, String id, T entity);
+	
+	/**
+	 * Update the entity
+	 * @param vhost
+	 * @param entity
+	 * @return
+	 */
+	T update(VirtualHost vhost, T entity);
+	
+	/**
+	 * Update the entity
+	 * @param database
+	 * @param prefix
+	 * @param entity
+	 * @return
+	 */
+	T update(String database, String prefix, T entity);
 	
 	/**
 	 * Update the entity
@@ -58,7 +76,26 @@ public interface CrudRepository<T extends CrudEntity> {
 	 * @param entity
 	 * @return
 	 */
+	@Deprecated
 	T update(String database, String prefix, String id, T entity);
+	
+	/**
+	 * Update the entity
+	 * @param vhost
+	 * @param id
+	 * @param entity
+	 * @return
+	 */
+	T updateFields(VirtualHost vhost, T entity);
+	
+	/**
+	 * Update the entity
+	 * @param vhost
+	 * @param id
+	 * @param entity
+	 * @return
+	 */
+	T updateFields(String database, String prefix, T entity);
 	
 	/**
 	 * Upsert the entity
