@@ -1,8 +1,10 @@
 language: java
+jdk:
+- oraclejdk8
 env:
   global:
-    - TERM=dumb
-    - secure: "GHQxdKoV64z9XRA20sRLc0P9RvjwOJo/v9rsvmXrH/0g/3yrkJuMW6QRmXgibW5s7EUPWC89HZt/t6gsRHSP6FKombLAWcqcreDNWm/qMQ88CZyWfeH+UrwNKCE4MLrqSt3dg/BE9BpIHasR2iw9Pfv3FpfuLiOyGNgud2j2MKw="
-    - secure: "kLUeIZIkE1XHv/kNh5oFPMsGiMd3FC5KAtM8Z4ZJ6e3dQ6sAAKY72yRIhT/AY8xY6ZS2iBqMH+A9VLP9IxayGNQiVMd1gctxcwBVbUzE+3jphkkpIzhNLl5ScLziLyz4nVpRTCJglxtGkem3hXFsCj2zk+KUTMI3cQj4fHRY1js="
-install: 
-  - "./gradlew clean test build publish publishBintray"
+  - TERM=dumb
+  - secure: ehLpQINxcXcrxwaoe73XgVxuTbikrznJev+vWerQybqEHipJe4Ad1wTihwaXU0rD5P3K0+heU0Yz68Xy4q3DLJ0gEji/Aao+AREzQOEjHw9t5YaI51TQOVxI0bIPuABZCQDl1tPW5ZrWS4tlY8odE4R4pC058z7cviM9rHPr+ZE=
+  - secure: FwexcJrdQGM7am1IKMCzGIiS8zO0PjYG6FMMuPOX3KvLhMzVFwnyIxui5EEf8P3VBXc9K4JfbHMJ3MAZhGq0U08Se3PvHDHfTJJ8i6KUOBnbsDu/Le2ZE/ksBeGATBM0HWAThz80tTll+zvaubTeIhR8nrF/9HzbspT93TTb+6o=
+install:
+- ./gradlew clean test build publish publishBintray
