@@ -10,6 +10,8 @@ public interface Database {
 	
 	List<Map<String, Object>> getMultipleResults(String db, String coll, Map<String, Object> query);
 	
+	List<Map<String, Object>> getMultipleResults(String db, String coll, Map<String, Object> query, int limit, int skip);
+	
 	Map<String, Object> findByID(String db, String collection, String id);
 	
 	Map<String, Object> findByField(String db, String collection, String field, String value);
