@@ -6,7 +6,7 @@ public interface RepositoryFactory extends Core9Plugin {
 	
 	<T extends CrudEntity> CrudRepository<T> getRepository(Class<T> type) throws NoCollectionNamePresentException;
 	
-	<T extends CrudEntity> CrudRepository<T> getRepository(final Class<T> type, boolean dynamicCollectionName);
+	<T extends CrudEntity> CrudRepository<T> getRepository(final Class<T> type, boolean dynamicCollectionName) throws NoCollectionNamePresentException;
 	
 	<T extends CrudEntity> CrudRepository<T> getCachedRepository(Class<T> type) throws NoCollectionNamePresentException;
 	
