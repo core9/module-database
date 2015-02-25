@@ -44,5 +44,10 @@ public abstract class AbstractCrudEntity implements CrudEntity {
 	public Map<String,Object> retrieveDefaultQuery() {
 		return null;
 	}
+	
+	@Override
+	public String retrieveCollectionOverride() {
+		return null;
+	}
 
 }
