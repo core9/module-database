@@ -31,4 +31,10 @@ public interface CrudEntity {
 	 * @return
 	 */
 	Map<String,Object> retrieveDefaultQuery();
+	
+	/**
+	 * Return the collection override (overrides a collection name set on a CrudEntity type
+	 * @return
+	 */
+	String retrieveCollectionOverride();
 }
