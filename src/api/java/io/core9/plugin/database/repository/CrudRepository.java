@@ -34,6 +34,15 @@ public interface CrudRepository<T extends CrudEntity> {
 	
 	/**
 	 * Return a new entity from the id
+	 * @param vhost
+	 * @param collection
+	 * @param id
+	 * @return
+	 */
+	T read(VirtualHost vhost, String collection, String id);
+	
+	/**
+	 * Return a new entity from the id
 	 * @param database
 	 * @param prefix
 	 * @param id
